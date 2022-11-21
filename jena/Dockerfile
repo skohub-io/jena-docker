@@ -15,7 +15,7 @@
 
 FROM openjdk:11-jre-slim-buster
 
-MAINTAINER Stian Soiland-Reyes <stain@apache.org>
+LABEL maintainer="Steffen Rörtgen <steffen.roertgen@hbz-nrw.de>"
 
 ENV LANG C.UTF-8
 
@@ -30,8 +30,8 @@ RUN set -eux; \
 
 # Update below according to https://jena.apache.org/download/
 # and checksum for apache-jena-3.x.x.tar.gz.sha512
-ENV JENA_SHA512 20706c955faebd2f090ce741a3b836016b75f86135e658d5d8cceb00a36b800f4e6158238bbfb7751bf13c1167d60236c49fbc7e099cd2e4c357bf36fe3323ca
-ENV JENA_VERSION 4.0.0
+ENV JENA_SHA512 20c8de036e20a1722d122d87b10ed13bbb759550aeca51fd02371450146fb792e79f63d81595ddc4f1b9c63e522a88da18b0880218954c627bec159aacc7c3c5
+ENV JENA_VERSION 4.6.1
 # No need for https due to sha512 checksums below
 ENV ASF_MIRROR http://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=
 ENV ASF_ARCHIVE http://archive.apache.org/dist/
